@@ -19,13 +19,13 @@ async def start_cmd(bot, msg):
 
 @Client.on_callback_query(filters.regex("start"))
 async def start(bot, msg, cb=True):   
-    txt=f"hai {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://github.com/MrMKN>MrMKN</a></b>"                                     
-    button= [[
-        InlineKeyboardButton("🤖 Bot Updates", url="https://t.me/mkn_bots_updates")
-        ],[
-        InlineKeyboardButton("ℹ️ Help", callback_data="help"),
-        InlineKeyboardButton("📡 About", callback_data="about") 
-    ]]  
+    txt=f"hai {msg.from_user.mention} \nThis is Rename Bot.\nMade by @MonkeyManMovies"                                     
+    #button= [[
+    #    InlineKeyboardButton("🤖 Bot Updates", url="https://t.me/mkn_bots_updates")
+    #    ],[
+    #    InlineKeyboardButton("ℹ️ Help", callback_data="help"),
+    #    InlineKeyboardButton("📡 About", callback_data="about") 
+    #]]  
     if cb:
         await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
     else:
