@@ -20,4 +20,4 @@ async def del_tumb(bot, msg):
     if temp.THUMBNAIL:
         await msg.reply_photo(photo=temp.THUMBNAIL, caption="Current thumbnail")
     else:
-        await msg.reply_text(text="you don't have any thumbnail")
+        await msg.reply_text(text="No Thumbnail")
